@@ -11,3 +11,68 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  background-color: #2e2f3e;
+}
+
+.App {
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App > * + * {
+  margin-top: 1em;
+}
+
+.lightbulb {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid transparent;
+}
+
+.lightbulb[data-brightness='off'] {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.lightbulb[data-brightness='33%'] {
+  background-color: rgba(255, 255, 255, 0.33);
+  filter: blur(4px);
+}
+
+.lightbulb[data-brightness='66%'] {
+  background-color: rgba(255, 255, 255, 0.66);
+  filter: blur(6px);
+}
+
+.lightbulb[data-brightness='100%'] {
+  background-color: #fff;
+  filter: blur(8px);
+}
+
+.state {
+  color: #fff;
+  font-size: 16px;
+  font-family: monospace;
+}
+
+button {
+  padding: 0.5em 1em;
+  border: none;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: antiquewhite;
+}
+
+button:active {
+  transform: translateY(2px);
+}
